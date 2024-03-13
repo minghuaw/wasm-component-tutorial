@@ -16,8 +16,6 @@ crate-type = ["cdylib"]
 package = "component:calculator"
 
 [package.metadata.component.dependencies]
-# "component:add" = { path = "../add/target/wasm32-wasi/release/add.wasm" }
-# "component:sub" = { path = "../sub/target/wasm32-wasi/release/sub.wasm" }
 
 [package.metadata.component.target]
 path = "wit"
