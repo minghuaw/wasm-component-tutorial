@@ -4,13 +4,23 @@ version = "0.1.0"
 edition = "2021"
 
 [package.metadata.component]
-package = "docs:calculator"
+package = "component:command"
+
+[package.metadata.component.dependencies]
 
 [package.metadata.component.target]
-path = "../wit/calculator.wit"
+path = "wit"
 world = "app"
 
+[package.metadata.component.target.dependencies]
+"component:add" = { path = "../add/wit/world.wit" }
+"component:sub" = { path = "../sub/wit/world.wit" }
+"component:calculator" = { path = "../calculator/wit/world.wit" }
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [dependencies]
+bitflags = "2.4.2"
+wit-bindgen-rt = "0.22.0"
 anyhow = "1"
 clap = { version = "4.3.19", features = ["derive"] }
-wit-bindgen = { version = "0.21.0", default-features = false, features = ["realloc"] }

@@ -1,0 +1,10 @@
+package component:sub;
+
+interface sub {
+    sub: func(a: u32, b: u32) -> u32;
+}
+
+/// An example world for the component to target.
+world subtractor {
+    export sub;
+}

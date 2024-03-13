@@ -1,16 +1,17 @@
+#[allow(warnings)]
 mod bindings;
 
-use bindings::exports::docs::calculator::calculate::{Guest, Op};
-
-// Bring the imported add function into scope
-use bindings::docs::calculator::add::add;
+use bindings::{component::{add::add::add, sub::sub::sub}, exports::component::calculator::calculate::{Guest, Op}};
 
 struct Component;
 
 impl Guest for Component {
-    fn eval_expression(op: Op, x: u32, y: u32) -> u32 {
+    fn eval(op: Op, a: u32, b: u32) -> u32 {
         match op {
-            Op::Add => add(x, y),
+            Op::Add => add(a, b),
+            Op::Sub => sub(a, b),
         }
     }
 }
+
+bindings::export!(Component with_types_in bindings);
