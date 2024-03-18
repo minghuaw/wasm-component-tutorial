@@ -22,5 +22,5 @@ path = "wit"
 world = "calculator"
 
 [package.metadata.component.target.dependencies]
-"component:add" = { path = "../add/wit/world.wit" }
-"component:sub" = { path = "../sub/wit/world.wit" }
+"component:add" = { path = "../add/wit" }
+"component:sub" = { path = "../sub/wit" }
