@@ -9,10 +9,15 @@ interface calculate {
     eval: func(op: op, a: u32, b: u32) -> u32;
 }
 
+world calculator-deps {
+    // import component:add/add;
+    // import component:sub/sub;
+}
+
 /// An example world for the component to target.
 world calculator {
-    import component:add/add;
-    import component:sub/sub;
+    // import component:add/add;
+    // import component:sub/sub;
 
     export calculate;
 }

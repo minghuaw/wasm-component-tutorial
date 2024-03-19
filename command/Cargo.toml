@@ -13,8 +13,8 @@ path = "wit"
 world = "app"
 
 [package.metadata.component.target.dependencies]
-"component:add" = { path = "../add/wit" }
-"component:sub" = { path = "../sub/wit" }
+# "component:add" = { path = "../add/wit" }
+# "component:sub" = { path = "../sub/wit" }
 "component:calculator" = { path = "../calculator/wit" }
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

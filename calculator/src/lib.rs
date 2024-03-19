@@ -1,7 +1,11 @@
 #[allow(warnings)]
 mod bindings;
 
-use bindings::{component::{add::add::add, sub::sub::sub}, exports::component::calculator::calculate::{Guest, Op}};
+mod raw_bindings;
+
+use bindings::exports::component::calculator::calculate::{Guest, Op};
+
+use raw_bindings::component::{add::add, sub::sub};
 
 struct Component;
 
